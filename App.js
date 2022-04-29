@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   top: {
-    flex: 0.3,
+    flex: 0.4,
     backgroundColor: '#05051E',
     borderWidth: 5,
     width: "100%", 
