@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView, } from 'react-native';
 import logo from './assets/gedalImage.png';
 import Links from './components/Links';
+import Events from './components/Events';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Text style={styles.text}>GEDAL</Text>
       <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>
       <Links />
+    <Events nameEvent={nameEvent} dateEvent={dateEvent} description={description} location={location} howToSee={howToSee} />
       </ScrollView>
       <StatusBar style="auto" />
     </View>
