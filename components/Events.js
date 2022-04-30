@@ -4,15 +4,14 @@ import { Text, View, Button, StyleSheet } from 'react-native';
 export default function Events(Props){
   return (
 
-    <View style={styles.container}>
+    <View style={styles.helpContainer}>
       
-   
-      
-    <Text>{Props.nameEvent}</Text>
-    <Text>{Props.dateEvent}</Text>
-    <Text>{Props.description}</Text>
-    <Text>{Props.location}</Text>
-    <Text>{Props.howToSee}</Text>
+
+    <Text style={styles.text}>{Props.nameEvent}</Text>
+    <Text style={styles.text}>{Props.dateEvent}</Text>
+    <Text style={styles.text}>{Props.description}</Text>
+    <Text style={styles.text}>{Props.location}</Text>
+    <Text style={styles.text}>{Props.howToSee}</Text>
      
 
     </View>
@@ -26,8 +25,12 @@ const styles = StyleSheet.create({
   helpContainer: {
     marginTop: 15,
     marginHorizontal: 20,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     color: '#2196F3'
   },
+  text: {
+    color: '#F7F7FC',
+    alignItems: 'flex-start'
+  }
   
 });
