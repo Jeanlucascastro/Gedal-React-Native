@@ -31,23 +31,13 @@ export default function App() {
     }) }
     
   }
-
-
-  
-
-
-
-
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.top} />
       <ScrollView>
       <Text style={styles.text}>GEDAL</Text>
       <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>
-      
-      <Links />
-
-        
+        <Links />
         <Events nameEvent={events.nameEvent} dateEvent={events.dateEvent} description={events.description} location={events.location} howToSee={events.howToSee} />
       </ScrollView>
       <StatusBar style="auto" />
