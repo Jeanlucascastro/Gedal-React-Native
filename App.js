@@ -5,41 +5,39 @@ import Links from './components/Links';
 import Events from './components/Events';
 import React, { useState } from 'react';
 
+
 export default function App() {
+
+  const event = [
+    {
+      "_id": "62673304fc326f37aa00b84c",
+      "nameEvent": "Na Rua de Olho para Lua",
+      "dateEvent": "2022-05-09T00:00:00.000Z",
+      "description": "Observacao da Luan na Praca",
+      "location": "Praca Nishinomia",
+      "howToSee": "Indo na praca",
+      "__v": 0
+    },
+    {
+      "_id": "62673304fc326f37aa00b84c",
+      "nameEvent": "Na Rua de O Lua",
+      "dateEvent": "2022-05-09T00:00:00.000Z",
+      "description": "Observacao da Luan na Praca",
+      "location": "Praca Nishinomia",
+      "howToSee": "Indo na praca",
+      "__v": 0
+    }]
   const [ events, setEvent] = useState([]);
 
-  class Mycomponent extends React.Component {
-    constructor(props){
-      super(props);
-      this.setEvent = {
-        error: null,
-        isLoaded: false,
-        items: []
-      }
-    }
-
-    componentMount() {
-
-      fetch("http://localhost:3000/events")
-            .then(res => res.json())
-            .then(
-              (result) => { 
-                this.setEvent({
-                  isLoaded: true.valueOf,
-                  items: result.items
-      });
-    }) }
-    
-  }
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.top} />
       <ScrollView>
-      <Text style={styles.text}>GEDAL</Text>
-      <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>
-        <Links />
-        <Events nameEvent={events.nameEvent} dateEvent={events.dateEvent} description={events.description} location={events.location} howToSee={events.howToSee} />
+        <Text style={styles.text}>GEDAL</Text>
+        <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>
+        <Events Props={event} />
       </ScrollView>
+      <Links />
       <StatusBar style="auto" />
     </View>
   );
