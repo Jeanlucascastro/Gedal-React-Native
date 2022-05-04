@@ -1,5 +1,4 @@
-import * as WebBrowser from 'expo-web-browser';
-import { Text, View, Button, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 export default function Events(){
 
