@@ -4,6 +4,7 @@ import logo from './assets/gedalImage.png';
 import Links from './components/Links';
 import Events from './components/Events';
 import React, { useState } from 'react';
+import Headerr from './components/Headerr';
 
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.top} />
+      <Headerr />
       <ScrollView>
         <Text style={styles.text}>GEDAL</Text>
         <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>

@@ -32,7 +32,7 @@ export default function Events(){
             
               <>
               <View key={Prop._id}>
-              <Text >{Prop.nameEvent}</Text>
+              <Text style={styles.text}>{Prop.nameEvent}</Text>
               <Text style={styles.text}>{Prop.dateEvent}</Text>
               <Text style={styles.text}>{Prop.description}</Text>
               <Text style={styles.text}>{Prop.location}</Text>

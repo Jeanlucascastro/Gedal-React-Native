@@ -15,9 +15,12 @@
     "expo": "^44.0.6",
     "expo-status-bar": "~1.2.0",
     "expo-web-browser": "^10.1.1",
+    "i": "^0.3.7",
+    "npm": "^8.8.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-vector-icons": "^9.1.0",
     "react-native-web": "^0.17.1"
   },
   "devDependencies": {
