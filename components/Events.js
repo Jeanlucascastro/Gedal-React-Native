@@ -53,6 +53,10 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     color: '#2196F3'
   },
+
+  // card: {
+
+  // },
   text: {
     color: '#F7F7FC',
     alignItems: 'flex-start'

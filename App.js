@@ -5,6 +5,7 @@ import Links from './components/Links';
 import Events from './components/Events';
 import React, { useState } from 'react';
 import Headerr from './components/Headerr';
+import SubHeaderr from './components/SubHeaderr';
 
 
 export default function App() {
@@ -34,9 +35,8 @@ export default function App() {
     <View style={styles.container}>
       <Image source={logo} style={styles.top} />
       <Headerr />
-      <ScrollView>
-        <Text style={styles.text}>GEDAL</Text>
-        <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>
+      <SubHeaderr/>
+      <ScrollView> 
         <Events Props={event} />
       </ScrollView>
       <Links />
@@ -48,9 +48,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#05051E',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    backgroundColor: '#0C0C0D',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   top: {
     flex: 0.4,
@@ -65,5 +65,9 @@ const styles = StyleSheet.create({
   text: {
     color: '#F7F7FC',
     alignItems: 'flex-start'
+  },
+
+  title: {
+    fontSize: 30
   }
 });

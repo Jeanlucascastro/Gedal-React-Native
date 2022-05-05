@@ -1,30 +1,32 @@
 import * as WebBrowser from 'expo-web-browser';
 import { Text, View, Button, StyleSheet } from 'react-native';
-import { Entypo } from '@expo/vector-icons';
-
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function Links(){
   return (
 
-      <View style={styles.helpContainer}>
-        <Button onPress={handleFacebook}  title="Facebook">
-        <Entypo name="facebook" size={24} color="black" />
-          <Text >
-           Facebook
-          </Text>
-        </Button>
-        <Button onPress={handleInstagram}  title="Instagram">
-        <Entypo name="instagram" size={24} color="black" />
-          <Text >
-           Instagram
-          </Text>
-        </Button>
-        <Button onPress={handleYoutube} title="YouTube">
-        <Entypo name="youtube" size={24} color="black" />
-          <Text >
-           YouTube
-          </Text>
-        </Button>
+      <View style={styles.side}>
+
+      <Text style={styles.text}>Siga nas Redes Sociais </Text>
+
+        <View style={styles.side}>
+        <FontAwesome name="facebook-official" backgroundColor="#3b5998" size={30} color="white" onPress={handleFacebook} />
+    
+
+
+        </View>
+
+        <View style={styles.side}>
+        <FontAwesome name="instagram" size={30} color="white" onPress={handleInstagram} />
+
+
+        </View>
+
+        <View style={styles.side}>
+        <FontAwesome name="youtube-play" size={30} color="white" onPress={handleYoutube}/>
+
+    
+        </View>
       </View>
    
   );
@@ -55,6 +57,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: '#2196F3'
   },
-  
+  side: {
+    flexDirection: 'row',
+    marginTop: 15,
+    marginBottom:5,
+    marginHorizontal: 20,
+    alignItems: 'center',
+    color: '#2196F3',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  text: {
+    color: '#F7F7FC',
+    alignItems: 'flex-start'
+  }
 });
 

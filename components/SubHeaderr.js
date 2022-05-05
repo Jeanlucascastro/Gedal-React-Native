@@ -2,13 +2,13 @@
 import { Text, View, StyleSheet } from 'react-native';
 
  
-export default function Headerr(){
+export default function SubHeaderr(){
 
 
   return (
     <View style={styles.side}>
     
-    <Text style={ styles.title}>GEDAL</Text>
+    <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>
    
 
     </View>
