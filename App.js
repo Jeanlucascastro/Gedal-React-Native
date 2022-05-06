@@ -35,12 +35,12 @@ export default function App() {
     <View style={styles.container}>
       {/* <Image source={logo} style={styles.top} /> */}
           <Headerr />
-      <SubHeaderr/>
+          <SubHeaderr/>
       <ScrollView> 
         <Events Props={event} />
       </ScrollView>
-      <Links />
-      <StatusBar style="auto" />
+        <Links />
+        <StatusBar style="auto" />
     </View>
   );
 }
