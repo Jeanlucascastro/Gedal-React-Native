@@ -6,11 +6,10 @@ export default function Headerr(){
 
 
   return (
-    <View style={styles.side}>
+    <View style={styles.top}>
     
     <Text style={ styles.title}>GEDAL</Text>
-   
-
+  
     </View>
   );
 }
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     color: '#629AD9'
   },
   head: {
-    backgroundColor: '#629AD9',
+    backgroundColor: '#000609',
     height: 64, 
     paddingTop: 20,
     paddingHorizontal: 15,
@@ -33,23 +32,35 @@ const styles = StyleSheet.create({
     borderBottomColor: '#2196F3'
   },
   text: {
-    color: '#F7F7FC',
+    color: '#000000',
     alignItems: 'flex-start'
   },
   side: {
     flexDirection: 'row',
-    marginTop: 15,
+    marginTop: 20,
     marginBottom:5,
     marginHorizontal: 20,
     alignItems: 'center',
-    color: '#2196F3',
+    backgroundColor: '#05051E',
     justifyContent: 'space-between',
     alignItems: 'center'
   },
+  top: {
+    flex: 0.4,
+    backgroundColor: '#467595',
+    marginTop: 15,
+    marginBottom:5,
+    width: "100%",
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
 
   title: {
-    fontSize: 30,
-    color: '#2196F3',
+    fontSize: 25,
+    color: '#05051E',
+    alignItems: 'center'
     
   }
   

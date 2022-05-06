@@ -33,8 +33,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Image source={logo} style={styles.top} />
-      <Headerr />
+      {/* <Image source={logo} style={styles.top} /> */}
+          <Headerr />
       <SubHeaderr/>
       <ScrollView> 
         <Events Props={event} />
@@ -48,9 +48,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0C0C0D',
-    alignItems: 'center',
+    backgroundColor: '#FBFCFD',
     justifyContent: 'center',
+    width: "100%", 
   },
   top: {
     flex: 0.4,
@@ -63,11 +63,18 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    color: '#F7F7FC',
+    color: '#000000',
     alignItems: 'flex-start'
   },
 
   title: {
     fontSize: 30
+  },
+
+  subtitle: {
+    backgroundColor: '#05051E',
+    resizeMode: "stretch",
+    flexDirection: 'row',
+    justifyContent: 'center',
   }
 });

@@ -8,7 +8,8 @@ export default function SubHeaderr(){
   return (
     <View style={styles.side}>
     
-    <Text style={styles.text}>Grupo de estudo e divulgação da Astronomia de Londrina</Text>
+    <Text style={styles.text}>GEDAL</Text>
+    <Text style={styles.textSub}>Proximos Eventos Astronomicos</Text>
    
 
     </View>
@@ -33,11 +34,17 @@ const styles = StyleSheet.create({
     borderBottomColor: '#2196F3'
   },
   text: {
-    color: '#F7F7FC',
-    alignItems: 'flex-start'
+    color: '#000000',
+    alignItems: 'flex-start',
+    fontSize: 25
   },
+  textSub: {
+    color: '#000000',
+    alignItems: 'flex-start',
+    fontSize: 15
+  },
+
   side: {
-    flexDirection: 'row',
     marginTop: 15,
     marginBottom:5,
     marginHorizontal: 20,

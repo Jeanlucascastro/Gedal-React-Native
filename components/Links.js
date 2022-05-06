@@ -10,20 +10,20 @@ export default function Links(){
       <Text style={styles.text}>Siga nas Redes Sociais </Text>
 
         <View style={styles.side}>
-        <FontAwesome name="facebook-official" backgroundColor="#3b5998" size={30} color="white" onPress={handleFacebook} />
+        <FontAwesome name="facebook-official" backgroundColor="#3b5998" size={30} color="black" onPress={handleFacebook} />
     
 
 
         </View>
 
         <View style={styles.side}>
-        <FontAwesome name="instagram" size={30} color="white" onPress={handleInstagram} />
+        <FontAwesome name="instagram" size={30} color="black" onPress={handleInstagram} />
 
 
         </View>
 
         <View style={styles.side}>
-        <FontAwesome name="youtube-play" size={30} color="white" onPress={handleYoutube}/>
+        <FontAwesome name="youtube-play" size={30} color="black" onPress={handleYoutube}/>
 
     
         </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    color: '#F7F7FC',
+    color: '#05051E',
     alignItems: 'flex-start'
   }
 });
