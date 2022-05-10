@@ -50,7 +50,7 @@ export default function Events(){
               <>
               <View key={Prop._id} style={styles.event}>
               <View style={styles.card}>
-                  <Text style={styles.nameText}>Evento: </Text>
+                    <Text style={styles.nameText}>Evento: </Text>
                    <Text style={styles.text}>{Prop.nameEvent}</Text>    
               </View>
               <View style={styles.card}>
@@ -59,15 +59,15 @@ export default function Events(){
               </View>
               <View style={styles.card}>
                   <Text style={styles.nameText}>Descrição: </Text>
-              <Text style={styles.text}>{Prop.description}</Text>
+                  <Text style={styles.text}>{Prop.description}</Text>
               </View>
               <View style={styles.card}>
                   <Text style={styles.nameText}>Local: </Text>
-              <Text style={styles.text}>{Prop.location}</Text>
+                  <Text style={styles.text}>{Prop.location}</Text>
               </View>
               <View style={styles.card}>
                   <Text style={styles.nameText}>Como Observar: </Text>
-              <Text style={styles.text}>{Prop.howToSee}</Text>
+                  <Text style={styles.text}>{Prop.howToSee}</Text>
               </View>
               </View>
               </>
@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    flexDirection: 'row',
     padding: 10,
     width: "90%", 
 
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
   },
 
   event: {
-    backgroundColor: '#8C959B',
+    backgroundColor: '#5DBCF8',
     borderRadius: 10,
     width: "95%", 
     marginTop: 8,
@@ -114,7 +113,8 @@ const styles = StyleSheet.create({
 
   text: {
     color: '#000000',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    fontSize: 15
   },
   nameText: {
     color: '#000000',

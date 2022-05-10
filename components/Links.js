@@ -2,6 +2,7 @@ import * as WebBrowser from 'expo-web-browser';
 import { Text, View, Button, StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
+
 export default function Links(){
   return (
 
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
   },
   side: {
     flexDirection: 'row',
-    marginTop: 15,
+    marginTop: 6,
     marginBottom:5,
     marginHorizontal: 20,
     alignItems: 'center',

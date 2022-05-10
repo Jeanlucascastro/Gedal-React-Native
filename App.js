@@ -34,7 +34,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* <Image source={logo} style={styles.top} /> */}
-          <Headerr />
+          {/* <Headerr /> */}
           <SubHeaderr/>
       <ScrollView> 
         <Events Props={event} />
