@@ -12,13 +12,38 @@ import axios from 'axios';
 export default function App() {
 
 
+  // var event =  axios.get('http://192.168.0.197:3000/events').then((json) => {
+  //   console.log(json)
+  //   return json.data;
+  // }
+  // ).catch((error) => {
+  //   throw error;
+  // });
+  // // var event = []
 
-
-
-
-
-
+  // var request = new XMLHttpRequest();
+  // request.onreadystatechange = (e) => {
+  //   if (request.readyState !== 4) {
+  //     return;
+  //   }
   
+  //   if (request.status === 200) {
+  //     console.log('success');
+      
+  //     event = request._response
+  //     console.log(event)
+      
+  //   } else {
+  //     console.warn('error');
+  //   }
+  // };
+  
+  // request.open('GET', 'http://192.168.0.197:3000/events/');
+  // request.send(); 
+  
+  
+
+
 
 
   return (
