@@ -1,20 +1,21 @@
 import { Text, View, StyleSheet } from 'react-native';
-import axios from 'axios';
+import React from 'react';
+import api from '../services/api';
 
 
-export default function Events(event){
 
-  var event = []
+export default function Events(){
 
-  var req =  axios.get('http://192.168.0.197:3000/events').then((json) => {
-    console.log(json.data)
-    return json.data;
-  }
-  ).catch((error) => {
-    throw error;
-  });
-  
-  Object.assign(event, req)
+  const [event, setEvent] = React.useState([])
+
+  React.useEffect( () => {
+    api.get('/events').then((response) => {
+      console.log(response.data)
+      setEvent(response.data)
+    }).catch(error => console.log(error))
+  },[])
+
+
 
   return (
       <>
