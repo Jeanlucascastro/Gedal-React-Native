@@ -7,3 +7,4 @@ O GEDAL, Grupo de Estudo e Divulgação de Astronomia de Londrina, é uma associ
 
 https://www.facebook.com/grupogedal/
 
+Utilizado ate o momento, Nest.Js para o backend, React Native para o aplicatimos moveis e os eventos sao salvos no mongodb. 
