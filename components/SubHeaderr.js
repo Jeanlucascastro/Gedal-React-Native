@@ -1,6 +1,8 @@
 
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import logo from '../assets/gedalImage.png';
+
 
  
 export default function SubHeaderr(){
@@ -10,12 +12,13 @@ export default function SubHeaderr(){
     <View style={styles.side}>
     
     <View>
-      <Text style={styles.text}>GEDAL</Text>
+      {/* <Text style={styles.text}>GEDAL</Text> */}
+      <Image source={logo} style={styles.logo} />
       <Text style={styles.textSub}>Proximos Eventos Astronomicos</Text>
     </View>
 
     <View >
-      <Ionicons name="reload" size={25} color="black" />
+      <Ionicons name="reload" size={25} color="white" />
     </View>
     </View>
   );
@@ -39,12 +42,12 @@ const styles = StyleSheet.create({
     borderBottomColor: '#2196F3'
   },
   text: {
-    color: '#000000',
+    color: '#FFFFFF',
     alignItems: 'flex-start',
     fontSize: 25
   },
   textSub: {
-    color: '#000000',
+    color: '#FFFFFF',
     alignItems: 'flex-start',
     fontSize: 15
   },
@@ -64,6 +67,11 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#2196F3',
     
+  },
+  logo: {
+    fontSize: 10,
+    width: 130,
+    height: 50
   },
   middle: {
 

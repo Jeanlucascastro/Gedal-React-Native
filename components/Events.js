@@ -1,6 +1,7 @@
 import { Text, View, StyleSheet } from 'react-native';
 import React from 'react';
 import api from '../services/api';
+import Moment from 'moment';
 
 
 
@@ -15,7 +16,9 @@ export default function Events(){
     }).catch(error => console.log(error))
   },[])
 
+  
 
+  Moment.locale('pt-br');
 
   return (
       <>
@@ -30,7 +33,8 @@ export default function Events(){
               </View>
               <View style={styles.card}>
                   <Text style={styles.nameText}>Data do evento: </Text>
-                  <Text style={styles.text}>{Prop.dateEvent}</Text>
+                   
+                  <Text style={styles.text}>{Moment(Prop.dateEvent).format('d MMM YYYY')} </Text>
               </View>
               <View style={styles.card}>
                   <Text style={styles.nameText}>Descrição: </Text>
@@ -61,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: '#2196F3',
     padding: 15,
-    backgroundColor: '#9FD1F3',
+    backgroundColor: '#150D0D',
     borderBottomWidth: 1,
     flex: 1
 
@@ -75,7 +79,7 @@ const styles = StyleSheet.create({
   },
 
   event: {
-    backgroundColor: '#5DBCF8',
+    backgroundColor: '#000000',
     borderRadius: 10,
     width: "95%", 
     marginTop: 8,
@@ -87,12 +91,12 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    color: '#000000',
+    color: '#FFFFFF',
     alignItems: 'flex-start',
     fontSize: 15
   },
   nameText: {
-    color: '#000000',
+    color: '#FFFFFF',
     alignItems: 'flex-start',
     fontSize: 18
   }
