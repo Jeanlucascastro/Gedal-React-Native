@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     
   },
   logo: {
-    fontSize: 10,
+    
     width: 130,
     height: 50
   },

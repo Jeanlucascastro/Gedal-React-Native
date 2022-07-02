@@ -11,41 +11,6 @@ import axios from 'axios';
 
 export default function App() {
 
-
-  // var event =  axios.get('http://192.168.0.197:3000/events').then((json) => {
-  //   console.log(json)
-  //   return json.data;
-  // }
-  // ).catch((error) => {
-  //   throw error;
-  // });
-  // // var event = []
-
-  // var request = new XMLHttpRequest();
-  // request.onreadystatechange = (e) => {
-  //   if (request.readyState !== 4) {
-  //     return;
-  //   }
-  
-  //   if (request.status === 200) {
-  //     console.log('success');
-      
-  //     event = request._response
-  //     console.log(event)
-      
-  //   } else {
-  //     console.warn('error');
-  //   }
-  // };
-  
-  // request.open('GET', 'http://192.168.0.197:3000/events/');
-  // request.send(); 
-  
-  
-
-
-
-
   return (
     <View style={styles.container}>
       {/* <Image source={logo} style={styles.top} /> */}
@@ -63,13 +28,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0D4A9F',
+    backgroundColor: '#262621',
     justifyContent: 'center',
     width: "100%", 
   },
   top: {
     flex: 0.4,
-    backgroundColor: '#05051E',
+    backgroundColor: '#223440',
     borderWidth: 5,
     width: "100%", 
     height: 100,
