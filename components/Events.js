@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
 
   event: {
-    backgroundColor: '#000000',
+    backgroundColor: '#223440',
     borderRadius: 10,
     width: "95%", 
     marginTop: 8,
