@@ -8,13 +8,11 @@ export default function Links(){
 
       <View style={styles.side}>
 
-      <Text style={styles.text}>Siga nas Redes Sociais </Text>
+      {/* <Text style={styles.text}>Siga nas Redes Sociais </Text> */}
 
         <View style={styles.side}>
         <FontAwesome name="facebook-official" backgroundColor="#3b5998" size={30} color="white" onPress={handleFacebook} />
     
-
-
         </View>
 
         <View style={styles.side}>
