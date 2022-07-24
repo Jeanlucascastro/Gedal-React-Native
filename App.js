@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import Headerr from './components/Headerr';
 import SubHeaderr from './components/SubHeaderr';
 import axios from 'axios';
+import 'moment/src/locale/pt'
 
 
 export default function App() {

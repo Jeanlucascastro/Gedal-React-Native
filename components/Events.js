@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, RefreshControl, FlatList, SafeAreaView, Activit
 import React from 'react';
 import api from '../services/api';
 import Moment from 'moment';
+import 'moment/src/locale/pt-br'
 
 
 
@@ -27,7 +28,9 @@ export default function Events(){
   }
   
 
-  Moment.locale('pt-br');
+
+let trLocale = require('moment/locale/pt-br');
+Moment.locale('pt-br',trLocale)
 
   return (
 
@@ -38,7 +41,7 @@ export default function Events(){
         data={event}
         renderItem={({item}) => 
         
-        
+          
         
                   <View key={item._id} style={styles.event} >
                     <View style={styles.card}>
@@ -48,7 +51,7 @@ export default function Events(){
                     <View style={styles.card}>
                         <Text style={styles.nameText}>Data do evento: </Text>
                          
-                        <Text style={styles.text}>{Moment(item.dateEvent).format('d MMM YYYY')} </Text>
+                        <Text style={styles.text}>{Moment(item.dateEvent).calendar()} </Text>
                     </View>
                     <View style={styles.card}>
                         <Text style={styles.nameText}>Descrição: </Text>
@@ -73,41 +76,7 @@ export default function Events(){
       />
 
       </SafeAreaView>
-    //   <>
-    //   {
-       
-    //    event.map((Prop) => (
-          
-    //           <View key={Prop._id} style={styles.event} refreshControl={
-    //             <RefreshControl onRefresh={getEventData} />
-    //             }>
-    //           <View style={styles.card}>
-    //                 <Text style={styles.nameText}>Evento: </Text>
-    //                <Text style={styles.text}>{Prop.nameEvent}</Text>    
-    //           </View>
-    //           <View style={styles.card}>
-    //               <Text style={styles.nameText}>Data do evento: </Text>
-                   
-    //               <Text style={styles.text}>{Moment(Prop.dateEvent).format('d MMM YYYY')} </Text>
-    //           </View>
-    //           <View style={styles.card}>
-    //               <Text style={styles.nameText}>Descrição: </Text>
-    //               <Text style={styles.text}>{Prop.description}</Text>
-    //           </View>
-    //           <View style={styles.card}>
-    //               <Text style={styles.nameText}>Local: </Text>
-    //               <Text style={styles.text}>{Prop.location}</Text>
-    //           </View>
-    //           <View style={styles.card}>
-    //               <Text style={styles.nameText}>Como Observar: </Text>
-    //               <Text style={styles.text}>{Prop.howToSee}</Text>
-    //           </View>
-              
-    //           </View>
-              
-          
-    //     ))}
-    // </>
+
   );
 }
 
