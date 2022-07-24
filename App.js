@@ -16,9 +16,9 @@ export default function App() {
       {/* <Image source={logo} style={styles.top} /> */}
           {/* <Headerr /> */}
           <SubHeaderr/>
-      <ScrollView> 
+      {/* <ScrollView >  */}
         <Events  />
-      </ScrollView>
+      {/* </ScrollView> */}
         <Links />  
         <StatusBar style="auto" />
     </View>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
   text: {
     color: '#000000',
-    alignItems: 'flex-start'
+    // alignItems: 'flex-start'
   },
 
   title: {

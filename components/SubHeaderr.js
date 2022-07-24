@@ -10,6 +10,7 @@ import api from '../services/api';
 export default function SubHeaderr(){
 
 
+
   return (
     <View style={styles.side}>
     
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   helpContainer: {
     marginTop: 12,
     marginHorizontal: 20,
-    alignItems: 'flex-start',
+    // alignItems: 'flex-start',
     color: '#629AD9'
   },
   head: {
@@ -51,12 +52,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#FFFFFF',
-    alignItems: 'flex-center',
+    // alignItems: 'flex-center',
     fontSize: 25
   },
   textSub: {
     color: '#FFFFFF',
-    alignItems: 'start',
+    // alignItems: 'start',
     fontSize: 13
   },
 
@@ -64,10 +65,10 @@ const styles = StyleSheet.create({
     marginTop: 25,
     marginBottom:5,
     marginHorizontal: 20,
-    alignItems: 'center',
+    // alignItems: 'center',
     color: '#2196F3',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    // alignItems: 'center',
     flexDirection: 'row',
   },
 

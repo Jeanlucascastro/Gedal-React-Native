@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, RefreshControl, FlatList, SafeAreaView, ActivityIndicator } from 'react-native';
 import React from 'react';
 import api from '../services/api';
 import Moment from 'moment';
@@ -7,52 +7,107 @@ import Moment from 'moment';
 
 export default function Events(){
 
+
+
   const [event, setEvent] = React.useState([])
+  const [refreshing, setRefreshing] = React.useState(true);
+
+  
 
   React.useEffect( () => {
+    getEventData();
+  },[])
+
+  const getEventData = () => {
     api.get('/events').then((response) => {
       console.log(response.data)
       setEvent(response.data)
+      setRefreshing(false);
     }).catch(error => console.log(error))
-  },[])
-
+  }
   
 
   Moment.locale('pt-br');
 
   return (
-      <>
-      {
+
+
+<SafeAreaView style={{ flex: 1, marginTop: 0 }}>
+    {refreshing ? <ActivityIndicator /> : null}
+    <FlatList
+        data={event}
+        renderItem={({item}) => 
+        
+        
+        
+                  <View key={item._id} style={styles.event} >
+                    <View style={styles.card}>
+                          <Text style={styles.nameText}>Evento: </Text>
+                         <Text style={styles.text}>{item.nameEvent}</Text>    
+                    </View>
+                    <View style={styles.card}>
+                        <Text style={styles.nameText}>Data do evento: </Text>
+                         
+                        <Text style={styles.text}>{Moment(item.dateEvent).format('d MMM YYYY')} </Text>
+                    </View>
+                    <View style={styles.card}>
+                        <Text style={styles.nameText}>Descrição: </Text>
+                        <Text style={styles.text}>{item.description}</Text>
+                    </View>
+                    <View style={styles.card}>
+                        <Text style={styles.nameText}>Local: </Text>
+                        <Text style={styles.text}>{item.location}</Text>
+                    </View>
+                    <View style={styles.card}>
+                        <Text style={styles.nameText}>Como Observar: </Text>
+                        <Text style={styles.text}>{item.howToSee}</Text>
+                    </View>
+                    
+                    </View>  
+
+      }
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={getEventData} />
+        }
+
+      />
+
+      </SafeAreaView>
+    //   <>
+    //   {
        
-       event.map((Prop) => (
+    //    event.map((Prop) => (
           
-              <View key={Prop._id} style={styles.event}>
-              <View style={styles.card}>
-                    <Text style={styles.nameText}>Evento: </Text>
-                   <Text style={styles.text}>{Prop.nameEvent}</Text>    
-              </View>
-              <View style={styles.card}>
-                  <Text style={styles.nameText}>Data do evento: </Text>
+    //           <View key={Prop._id} style={styles.event} refreshControl={
+    //             <RefreshControl onRefresh={getEventData} />
+    //             }>
+    //           <View style={styles.card}>
+    //                 <Text style={styles.nameText}>Evento: </Text>
+    //                <Text style={styles.text}>{Prop.nameEvent}</Text>    
+    //           </View>
+    //           <View style={styles.card}>
+    //               <Text style={styles.nameText}>Data do evento: </Text>
                    
-                  <Text style={styles.text}>{Moment(Prop.dateEvent).format('d MMM YYYY')} </Text>
-              </View>
-              <View style={styles.card}>
-                  <Text style={styles.nameText}>Descrição: </Text>
-                  <Text style={styles.text}>{Prop.description}</Text>
-              </View>
-              <View style={styles.card}>
-                  <Text style={styles.nameText}>Local: </Text>
-                  <Text style={styles.text}>{Prop.location}</Text>
-              </View>
-              <View style={styles.card}>
-                  <Text style={styles.nameText}>Como Observar: </Text>
-                  <Text style={styles.text}>{Prop.howToSee}</Text>
-              </View>
-              </View>
+    //               <Text style={styles.text}>{Moment(Prop.dateEvent).format('d MMM YYYY')} </Text>
+    //           </View>
+    //           <View style={styles.card}>
+    //               <Text style={styles.nameText}>Descrição: </Text>
+    //               <Text style={styles.text}>{Prop.description}</Text>
+    //           </View>
+    //           <View style={styles.card}>
+    //               <Text style={styles.nameText}>Local: </Text>
+    //               <Text style={styles.text}>{Prop.location}</Text>
+    //           </View>
+    //           <View style={styles.card}>
+    //               <Text style={styles.nameText}>Como Observar: </Text>
+    //               <Text style={styles.text}>{Prop.howToSee}</Text>
+    //           </View>
+              
+    //           </View>
               
           
-        ))}
-    </>
+    //     ))}
+    // </>
   );
 }
 
@@ -61,7 +116,7 @@ const styles = StyleSheet.create({
   helpContainer: {
     marginTop: 15,
     marginHorizontal: 20,
-    alignItems: 'center',
+    // alignItems: 'center',
     color: '#2196F3',
     padding: 15,
     backgroundColor: '#150D0D',
@@ -85,18 +140,18 @@ const styles = StyleSheet.create({
     marginBottom:4,
     marginHorizontal: 10,
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
     
   },
 
   text: {
     color: '#FFFFFF',
-    alignItems: 'flex-start',
+    // alignItems: 'flex-start',
     fontSize: 15
   },
   nameText: {
     color: '#FFFFFF',
-    alignItems: 'flex-start',
+    // alignItems: 'flex-start',
     fontSize: 18
   }
   
