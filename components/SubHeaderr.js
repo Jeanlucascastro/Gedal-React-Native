@@ -1,6 +1,7 @@
 
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import logo from '../assets/gedalImage.png';
 import api from '../services/api';
 
@@ -21,7 +22,8 @@ export default function SubHeaderr(){
     </View>
 
     <View >
-      <Ionicons  name="reload" size={25} color="white"  onPress={updateEvents}/>
+      {/* <Ionicons  name="reload" size={25} color="white"  onPress={updateEvents}/> */}
+      <AntDesign name="infocirlceo" size={20} color="white" />
     </View>
     </View>
   );
