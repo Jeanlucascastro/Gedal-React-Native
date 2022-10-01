@@ -6,18 +6,18 @@ import 'moment/src/locale/pt-br'
 
 
 
-export default function Events(){
+export default function Events() {
 
 
 
   const [event, setEvent] = React.useState([])
   const [refreshing, setRefreshing] = React.useState(true);
 
-  
 
-  React.useEffect( () => {
+
+  React.useEffect(() => {
     getEventData();
-  },[])
+  }, [])
 
   const getEventData = () => {
     api.get('/events').then((response) => {
@@ -26,62 +26,57 @@ export default function Events(){
       setRefreshing(false);
     }).catch(error => console.log(error))
   }
-  
 
 
-let trLocale = require('moment/locale/pt-br');
-Moment.locale('pt-br',trLocale)
+
+  let trLocale = require('moment/locale/pt-br');
+  Moment.locale('pt-br', trLocale)
 
   return (
 
 
-<SafeAreaView style={{ flex: 1, marginTop: 0 }}>
-    {refreshing ? <ActivityIndicator /> : null}
-    <FlatList
+    <SafeAreaView style={{ flex: 1, marginTop: 0 }}>
+      {refreshing ? <ActivityIndicator /> : null}
+      <FlatList
         data={event}
-        renderItem={({item}) => 
-        
-          
-        
-                  <View key={item._id} style={styles.event} >
-                    <View style={styles.card}>
-                          <Text style={styles.nameText}>Evento: </Text>
-                         <Text style={styles.text}>{item.nameEvent}</Text>    
-                    </View>
-                    <View style={styles.card}>
-                        <Text style={styles.nameText}>Data do evento: </Text>
-                         
-                        <Text style={styles.text}>{Moment(item.dateEvent).calendar()} </Text>
-                    </View>
-                    <View style={styles.card}>
-                        <Text style={styles.nameText}>Descrição: </Text>
-                        <Text style={styles.text}>{item.description}</Text>
-                    </View>
-                    <View style={styles.card}>
-                        <Text style={styles.nameText}>Local: </Text>
-                        <Text style={styles.text}>{item.location}</Text>
-                    </View>
-                    <View style={styles.card}>
-                        <Text style={styles.nameText}>Como Observar: </Text>
-                        <Text style={styles.text}>{item.howToSee}</Text>
-                    </View>
-                    
-                    </View>  
+        renderItem={({ item }) =>
+          <View key={item._id} style={styles.event} >
+            <View style={styles.card}>
+              <Text style={styles.nameText}>Evento: </Text>
+              <Text style={styles.text}>{item.nameEvent}</Text>
+            </View>
+            <View style={styles.card}>
+              <Text style={styles.nameText}>Data do evento: </Text>
 
-      }
-      refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={getEventData} />
+              <Text style={styles.text}>{Moment(item.dateEvent).calendar()} </Text>
+            </View>
+            <View style={styles.card}>
+              <Text style={styles.nameText}>Descrição: </Text>
+              <Text style={styles.text}>{item.description}</Text>
+            </View>
+            <View style={styles.card}>
+              <Text style={styles.nameText}>Local: </Text>
+              <Text style={styles.text}>{item.location}</Text>
+            </View>
+            <View style={styles.card}>
+              <Text style={styles.nameText}>Como Observar: </Text>
+              <Text style={styles.text}>{item.howToSee}</Text>
+            </View>
+          </View>
+        }
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={getEventData} />
         }
 
       />
 
-      </SafeAreaView>
+    </SafeAreaView>
 
   );
 }
 
 const styles = StyleSheet.create({
-  
+
   helpContainer: {
     marginTop: 15,
     marginHorizontal: 20,
@@ -96,21 +91,21 @@ const styles = StyleSheet.create({
 
   card: {
     padding: 10,
-    width: "90%", 
+    width: "90%",
 
-   
+
   },
 
   event: {
     backgroundColor: '#223440',
     borderRadius: 10,
-    width: "95%", 
+    width: "95%",
     marginTop: 8,
-    marginBottom:4,
+    marginBottom: 4,
     marginHorizontal: 10,
     justifyContent: 'center',
     // alignItems: 'center',
-    
+
   },
 
   text: {
@@ -123,5 +118,5 @@ const styles = StyleSheet.create({
     // alignItems: 'flex-start',
     fontSize: 18
   }
-  
+
 });

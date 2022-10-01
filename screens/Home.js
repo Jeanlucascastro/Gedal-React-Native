@@ -1,25 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView, } from 'react-native';
-// import logo from '../../assets/gedalImage.png';
+import logo from '../assets/gedalImage.png';
 import Links from '../components/Links';
 import Events from '../components/Events';
-// import React, { useState, useEffect } from 'react';
-// import Headerr from '../../components/Headerr';
+import React, { useState, useEffect } from 'react';
+import Headerr from '../components/Headerr';
 import SubHeaderr from '../components/SubHeaderr';
-// import axios from 'axios';
-i
+import axios from 'axios';
+import 'moment/src/locale/pt'
 
 
-export default function Home() {
+export default function Home({navigation}) {
 
   return (
     <View style={styles.container}>
       {/* <Image source={logo} style={styles.top} /> */}
           {/* <Headerr /> */}
-          <SubHeaderr/>
-      <ScrollView> 
+          <SubHeaderr navigation={navigation}/>
+      {/* <ScrollView >  */}
         <Events  />
-      </ScrollView>
+      {/* </ScrollView> */}
         <Links />  
         <StatusBar style="auto" />
     </View>
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 
   text: {
     color: '#000000',
-    alignItems: 'flex-start'
+    // alignItems: 'flex-start'
   },
 
   title: {

@@ -7,22 +7,14 @@ import React, { useState, useEffect } from 'react';
 import Headerr from './components/Headerr';
 import SubHeaderr from './components/SubHeaderr';
 import axios from 'axios';
-import 'moment/src/locale/pt'
+import 'moment/src/locale/pt';
+import { Routes } from './routes';
 
 
 export default function App() {
 
   return (
-    <View style={styles.container}>
-      {/* <Image source={logo} style={styles.top} /> */}
-          {/* <Headerr /> */}
-          <SubHeaderr/>
-      {/* <ScrollView >  */}
-        <Events  />
-      {/* </ScrollView> */}
-        <Links />  
-        <StatusBar style="auto" />
-    </View>
+    <Routes />
   );
 }
 

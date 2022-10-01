@@ -7,24 +7,26 @@ import api from '../services/api';
 
 
 
- 
-export default function SubHeaderr(){
 
+export default function SubHeaderr({navigation}) {
 
+function openScreen(){
+  navigation.navigate('Info')
+}
 
   return (
     <View style={styles.side}>
-    
-    <View>
-      {/* <Text style={styles.text}>GEDAL</Text> */}
-      <Image source={logo} style={styles.logo} />
-      <Text style={styles.textSub}>Proximos Eventos Astronomicos</Text>
-    </View>
 
-    <View >
-      {/* <Ionicons  name="reload" size={25} color="white"  onPress={updateEvents}/> */}
-      <AntDesign name="infocirlceo" size={20} color="white" />
-    </View>
+      <View>
+        {/* <Text style={styles.text}>GEDAL</Text> */}
+        <Image source={logo} style={styles.logo} />
+        <Text style={styles.textSub}>Proximos Eventos Astronomicos</Text>
+      </View>
+
+      <View >
+        {/* <Ionicons  name="reload" size={25} color="white"  onPress={updateEvents}/> */}
+        <AntDesign name="infocirlceo" size={20} color="white" onPress={openScreen} />
+      </View>
     </View>
   );
 }
@@ -37,7 +39,7 @@ function updateEvents() {
 }
 
 const styles = StyleSheet.create({
-  
+
   helpContainer: {
     marginTop: 12,
     marginHorizontal: 20,
@@ -46,7 +48,7 @@ const styles = StyleSheet.create({
   },
   head: {
     backgroundColor: '#629AD9',
-    height: 64, 
+    height: 64,
     paddingTop: 20,
     paddingHorizontal: 15,
     borderBottomWidth: 1,
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
 
   side: {
     marginTop: 25,
-    marginBottom:5,
+    marginBottom: 5,
     marginHorizontal: 20,
     // alignItems: 'center',
     color: '#2196F3',
@@ -77,15 +79,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     color: '#2196F3',
-    
+
   },
   logo: {
-    
+
     width: 130,
     height: 50
   },
   middle: {
 
   }
-  
+
 });
