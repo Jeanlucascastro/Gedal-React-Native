@@ -4,8 +4,8 @@ import { StackRoutes } from './stack.routes';
 
 export function Routes() {
     return (
-        <NavigationContainer>
-            <StackRoutes />
+        <NavigationContainer Style={{ backgroundColor: '#2196F3' }}>
+            <StackRoutes Style={{ backgroundColor: '#2196F3' }}/>
         </NavigationContainer>
     )
 }

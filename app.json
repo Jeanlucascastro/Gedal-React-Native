@@ -6,9 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/gedalImage.png"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,14 +21,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "Gedal.apk"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "splash": {
-      "image": "./assets/gedalImage.png"
     }
-
   }
 }

@@ -14,7 +14,10 @@ import { Routes } from './routes';
 export default function App() {
 
   return (
-    <Routes />
+    <View style={styles.container}>
+      <Routes/>
+    </View>
+  
   );
 }
 
