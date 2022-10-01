@@ -5,6 +5,7 @@ Este aplicativo tem a finalidade de divulgar os eventos atronomicos e os eventos
 
 O GEDAL, Grupo de Estudo e Divulgação de Astronomia de Londrina, é uma associação civil sem fins lucrativos atuante desde 1.999 em Londrina, e devidamente legalizada em 2.001. Formado por indivíduos das mais variadas formações culturais e profissionais, unidos pelo interesse mútuo em torno da Astronomia e suas ciências correlatas, o GEDAL promove as mais variadas atividades em prol da divulgação do supracitado ramo do saber humano.
 
+https://www.instagram.com/grupogedal/
 https://www.facebook.com/grupogedal/
 
 Utilizado ate o momento, Nest.Js para o backend, React Native para o aplicatimos moveis e os eventos sao salvos no mongodb. 
