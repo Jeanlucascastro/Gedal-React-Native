@@ -20,7 +20,7 @@ export default function Events() {
   }, [])
 
   const getEventData = () => {
-    api.get('/events').then((response) => {
+    api.get('/topicos').then((response) => {
       console.log(response.data)
       setEvent(response.data)
       setRefreshing(false);
@@ -43,25 +43,26 @@ export default function Events() {
           <View key={item._id} style={styles.event} >
             <View style={styles.card}>
               <Text style={styles.nameText}>Evento: </Text>
-              <Text style={styles.text}>{item.nameEvent}</Text>
+              <Text style={styles.text}>{item.titulo}</Text>
             </View>
             <View style={styles.card}>
               <Text style={styles.nameText}>Data do evento: </Text>
 
-              <Text style={styles.text}>{Moment(item.dateEvent).calendar()} </Text>
+              <Text style={styles.text}>{Moment(item.momento).calendar()} </Text>
             </View>
             <View style={styles.card}>
               <Text style={styles.nameText}>Descrição: </Text>
-              <Text style={styles.text}>{item.description}</Text>
+              <Text style={styles.text}>{item.conteudo}</Text>
             </View>
             <View style={styles.card}>
               <Text style={styles.nameText}>Local: </Text>
-              <Text style={styles.text}>{item.location}</Text>
+              <Text style={styles.text}>{item.localizacao}</Text>
             </View>
             <View style={styles.card}>
               <Text style={styles.nameText}>Como Observar: </Text>
-              <Text style={styles.text}>{item.howToSee}</Text>
+              <Text style={styles.text}>{item.comoObservar}</Text>
             </View>
+            <Comentarios props={item.comentarios}/>
           </View>
         }
         refreshControl={
