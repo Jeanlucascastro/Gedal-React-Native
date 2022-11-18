@@ -23,6 +23,12 @@ export function StackRoutes() {
             <Screen
                 name="Info"
                 component={About}
+                options={{
+                    headerStyle: {
+                        backgroundColor: '#262621',
+                      },
+                      headerTintColor: '#fff'
+                }}
             />
         </Navigator>
     )

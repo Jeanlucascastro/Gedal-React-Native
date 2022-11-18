@@ -6,6 +6,7 @@ import 'moment/src/locale/pt-br'
 
 export default function Comentarios(props) {
 
+
     let trLocale = require('moment/locale/pt-br');
     Moment.locale('pt-br', trLocale)
 

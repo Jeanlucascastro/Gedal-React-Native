@@ -2,7 +2,8 @@ import { Text, View, StyleSheet, RefreshControl, FlatList, SafeAreaView, Activit
 import React from 'react';
 import api from '../services/api';
 import Moment from 'moment';
-import 'moment/src/locale/pt-br'
+import 'moment/src/locale/pt-br';
+import Comentarios from './comentarios';
 
 
 
@@ -62,7 +63,9 @@ export default function Events() {
               <Text style={styles.nameText}>Como Observar: </Text>
               <Text style={styles.text}>{item.comoObservar}</Text>
             </View>
+            <View>
             <Comentarios props={item.comentarios}/>
+            </View>
           </View>
         }
         refreshControl={
