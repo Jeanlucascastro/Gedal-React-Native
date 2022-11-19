@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView, } from 'react-native';
 import logo from '../assets/gedalImage.png';
 import Links from '../components/Links';
+import LinksInfoPage from '../components/LinksInfoPage';
 import Events from '../components/Events';
 import React, { useState, useEffect } from 'react';
 import Headerr from '../components/Headerr';
@@ -20,6 +21,7 @@ export default function About({navigation}) {
       {/* <ScrollView >  */}
         {/* <Events  /> */}
       {/* </ScrollView> */}
+        <LinksInfoPage />
         <Links />  
         <StatusBar style="auto" />
     </View>

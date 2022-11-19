@@ -14,20 +14,14 @@ export function StackRoutes() {
                 name="Inicio"
                 component={Home}
                 options={{
-                    headerStyle: {
-                        backgroundColor: '#262621',
-                      },
-                      headerTintColor: '#fff'
+                    headerShown: false
                 }}
             />
             <Screen
                 name="Info"
                 component={About}
                 options={{
-                    headerStyle: {
-                        backgroundColor: '#262621',
-                      },
-                      headerTintColor: '#fff'
+                    headerShown: false
                 }}
             />
         </Navigator>

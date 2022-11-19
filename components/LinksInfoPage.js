@@ -11,23 +11,25 @@ export default function Links(){
       {/* <Text style={styles.text}>Siga nas Redes Sociais </Text> */}
 
       <View style={styles.side}>
-        <Entypo name="home" backgroundColor="#3b5998" size={30} color="white" onPress={handleFacebook} />
+        <FontAwesome name="facebook-official" backgroundColor="#3b5998" size={30} color="white" onPress={handleFacebook} />
     
         </View>
 
         <View style={styles.side}>
-        <AntDesign name="infocirlceo" backgroundColor="#3b5998" size={25} color="white" onPress={openScreen} />
-    
+        <FontAwesome name="instagram" size={30} color="white" onPress={handleInstagram} />
+
+
         </View>
 
+        <View style={styles.side}>
+        <FontAwesome name="youtube-play" size={30} color="white" onPress={handleYoutube}/>
+
+    
+        </View>
 
       </View>
    
   );
-}
-
-function openScreen(){
-  navigation.navigate('Info')
 }
 
 function handleFacebook() {
